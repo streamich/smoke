@@ -1,7 +1,0 @@
-{
-  "smoke-hub": [],
-  "smoke-node": [],
-  "bench": [
-    "smoke-node"
-  ]
-}

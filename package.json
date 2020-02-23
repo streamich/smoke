@@ -1,37 +1,26 @@
 {
-  "name": "smoke",
+  "name": "smoke-next",
   "version": "1.0.0",
-  "description": "Run web and network application servers from within web browsers.",
-  "main": "tasks.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
     "clean": "smoke-task clean",
-    "bench": "smoke-task bench",
-    "test": "smoke-task test",
-    "pack-node": "smoke-pack pack smoke-node",
-    "pack-hub": "smoke-pack pack smoke-hub",
-    "doc": "smoke-task doc"
+    "watch": "smoke-task watch"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sinclairzx81/smoke.git"
-  },
-  "keywords": [
-    "smoke",
-    "node",
-    "webrtc",
-    "indexedb",
-    "gpgpu"
-  ],
-  "author": "sinclairzx81",
+  "keywords": [],
+  "author": "",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/sinclairzx81/smoke/issues"
-  },
-  "homepage": "https://github.com/sinclairzx81/smoke#readme",
+  "browserslist": [
+    "last 1 Chrome versions"
+  ],
   "devDependencies": {
-    "shx": "^0.3.2",
-    "smoke-pack": "^0.8.0",
-    "smoke-task": "^1.0.7"
+    "@types/node": "^13.7.4",
+    "@types/ws": "^7.2.1",
+    "parcel-bundler": "^1.12.4",
+    "smoke-task": "^1.1.2",
+    "typescript": "^3.8.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "ws": "^7.2.1"
+  }
 }
