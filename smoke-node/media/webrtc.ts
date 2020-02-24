@@ -31,15 +31,25 @@ export class WebRTC {
   /** Generates a live MediaStream test pattern. */
   public static createTestPattern(): MediaStream {
     const canvas  = document.createElement('canvas')
-    canvas.width  = 1024
-    canvas.height = 768
+    canvas.width  = 256
+    canvas.height = 256
     const context = canvas.getContext('2d')!
+    context.translate(128, 128)
     setInterval(() => {
       const r = Math.floor(Math.random() * 255)
       const g = Math.floor(Math.random() * 255)
       const b = Math.floor(Math.random() * 255)
+      context.fillStyle = `#333`
+      context.fillRect(-256, -256, 512, 512)
       context.fillStyle = `rgb(${r}, ${g}, ${b})`
-      context.fillRect(0, 0, 100, 100)
+      context.fillRect(-128, -64, 196, 32)
+      context.fillStyle = `white`
+
+      context.font = '30px Arial'
+      context.fillText("smoke-node", -128, 10)
+      context.font = '20px Arial'
+      context.fillText(new Date().toString(), -128, 40)
+      context.rotate(0.01)
     }, 10)
     const facade = canvas as any
     return facade['captureStream'](30)

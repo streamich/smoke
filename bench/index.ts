@@ -7,9 +7,7 @@ const node_b = new Node({ hub: new NetworkHub('ws://localhost:5001') })
 // start web server on node_a
 const server = node_a.rest.createServer({})
 server.get('/', (req, res) => {
-
     res.send('hello world')
-
 }).listen(80)
 
 // get node_a's public endpoint

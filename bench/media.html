@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <script async src="./media.ts"></script>
+        <style>
+            .video-container {
+                float: left;
+                width: 278px;
+            }
+            video {
+                border: 1px solid;
+                width:  256;
+                height: 256;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>smoke-node: workbench</h3>
+        <p>Open the developer console to see output.</p>
+        <div>
+            <button id="start">Click to Start</button>
+        </div>
+        <div class='video-container'>
+            <p>node_a: The media source</p>
+            <video id="video_a"></video>
+        </div>
+        <div class='video-container'>
+            <p>node_b: The media proxy</p>
+            <video id="video_b"></video>
+        </div>
+        <div class='video-container'>
+            <p>node_c: The client.</p>
+            <video id="video_c"></video>
+        </div>
+        <div class='video-container'>
+            <p>node_d: The client.</p>
+            <video id="video_d"></video>
+        </div>
+    </body>
+</html>
